@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.remote-container {
+    width: 100%;
+    max-width: 380px;
+    background: #1e293b;
+    border-radius: 30px;
+    padding: 25px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+    border: 1px solid #334155;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.5rem;
+    color: #38bdf8;
+    letter-spacing: 1px;
+}
+
+.status-indicator {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+/* Brand Selection Dropdown */
+.brand-select-container {
+    margin-bottom: 20px;
+}
+
+.brand-select-container select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #0f172a;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    outline: none;
+    font-size: 0.95rem;
+}
+
+/* Grid & Buttons */
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #334155;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.btn:active {
+    transform: scale(0.92);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.btn-power {
+    width: 60px;
+    height: 60px;
+    background-color: #ef4444;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.btn-power:active {
+    background-color: #dc2626;
+}
+
+.btn-mode {
+    width: 60px;
+    height: 60px;
+    background-color: #0284c7;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+/* D-Pad Directional Controls */
+.dpad-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.dpad {
+    width: 200px;
+    height: 200px;
+    background-color: #0f172a;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #334155;
+}
+
+.dpad-btn {
+    position: absolute;
+    background-color: #334155;
+    color: #ffffff;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dpad-btn:active {
+    background-color: #475569;
+}
+
+.dpad-up {
+    top: 10px;
+    left: 65px;
+    width: 70px;
+    height: 50px;
+    border-radius: 30px 30px 10px 10px;
+}
+
+.dpad-down {
+    bottom: 10px;
+    left: 65px;
+    width: 70px;
+    height: 50px;
+    border-radius: 10px 10px 30px 30px;
+}
+
+.dpad-left {
+    top: 65px;
+    left: 10px;
+    width: 50px;
+    height: 70px;
+    border-radius: 30px 10px 10px 30px;
+}
+
+.dpad-right {
+    top: 65px;
+    right: 10px;
+    width: 50px;
+    height: 70px;
+    border-radius: 10px 30px 30px 10px;
+}
+
+.dpad-ok {
+    top: 65px;
+    left: 65px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #38bdf8;
+    color: #0f172a;
+    font-weight: bold;
+}
+
+.dpad-ok:active {
+    background-color: #0284c7;
+}
+
+/* Volume and Channel Controls */
+.vol-ch-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px 0;
+}
+
+.rocker {
+    background-color: #0f172a;
+    width: 70px;
+    height: 140px;
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #334155;
+}
+
+.rocker-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #334155;
+    color: #ffffff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.rocker-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    font-weight: bold;
+}
+
+/* Streaming Shortcuts */
+.shortcuts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.btn-shortcut {
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: #ffffff;
+    transition: opacity 0.2s;
+}
+
+.btn-shortcut:active {
+    opacity: 0.8;
+}
+
+.btn-youtube {
+    background-color: #FF0000;
+}
+
+.btn-netflix {
+    background-color: #E50914;
+}
