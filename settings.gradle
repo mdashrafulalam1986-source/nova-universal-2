@@ -6,12 +6,11 @@ pluginManagement {
     }
 }
 dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOSITORIES)
     repositories {
         google()
         mavenCentral()
     }
 }
-
-rootProject.name = "Nova Universal"
+rootProject.name = "nova-universal-2"
 include ':app'
